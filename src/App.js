@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import Gallery from "./components/Gallery";
+import Letter from "./components/Letter";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+  const [entered, setEntered] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <AnimatePresence mode="wait">
+      {!entered ? (
+        <Landing key="landing" onEnter={() => setEntered(true)} />
+      ) : (
+        <motion.main
+          key="main"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar />
+          <section id="gallery"><Gallery /></section>
+          <section id="letter"><Letter /></section>
+          <Footer />
+        </motion.main>
+      )}
+    </AnimatePresence>
   );
 }
-
-export default App;
