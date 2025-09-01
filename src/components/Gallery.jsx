@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Camera, Star, Gift } from "lucide-react";
+import { Camera, Star, Gift, HeartHandshakeIcon, HeartPulse, HeartIcon } from "lucide-react";
 import { photos } from "../utils/photos";
 import ImageModal from "./ImageModal";
 
@@ -49,7 +49,7 @@ export default function Gallery() {
 
   return (
     <Section>
-      <Heading><Camera /> Our Beautiful Memories <Star /></Heading>
+      <Heading><HeartIcon /> Congratulations on Graduating Bebeeee <Star /></Heading>
       <Grid>
         {photos.map((p, i) => (
           <Card

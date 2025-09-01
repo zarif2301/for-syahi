@@ -48,9 +48,9 @@ export default function Letter() {
           <Sparkles size={260} style={{ bottom: -40, right: -40 }} />
         </Accents>
 
-        <Header><Sparkles /> A Letter For You <Sparkles /></Header>
+        <Header><Sparkles /> To Syahi <Sparkles /></Header>
         <Body>
-          Congratulations on graduating my loooove💙. I am soooo proud of you for everything you’ve accomplished. 🎓💖
+          Congratulations on graduating my loooove💙. I am soooo proud of you for everything you’ve accomplished.💖
           This graduation is just the beginning of all the incredible things I
           know you’ll achieve. You’ve worked so hard, and I admire your
           strength, determination, and passion. I can’t wait to see where life

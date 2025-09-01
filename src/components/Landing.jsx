@@ -126,7 +126,7 @@ export default function Landing({ onEnter }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        You did it. I’m so proud of you. Let’s walk down our memory lane ✨
+        You did ittttt. I’m so proud of you for making this far. I made this for you and i hope you like it✨
       </Subtitle>
 
       <EnterBtn onClick={handleEnter}>

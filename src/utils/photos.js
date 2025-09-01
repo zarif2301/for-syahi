@@ -7,6 +7,6 @@ export const photos = [
   { src: "/photos/4.jpg", alt: "Memory 4", compliment: "You are breathtakingly beautiful 💖" },
   { src: "/photos/5.jpg", alt: "Memory 5", compliment: "You make my world a brighter place 🌸" },
   { src: "/photos/6.jpg", alt: "Memory 6", compliment: "Just being with you makes the day much better ✨" },
-  { src: "/photos/7.jpg", alt: "Memory 7", compliment: "Your laughter is pure music to the soul 🎶" },
+  { src: "/photos/7.jpg", alt: "Memory 7", compliment: "Your laughter is music to my ears 🎶" },
   { src: "/photos/8.jpg", alt: "Memory 8", compliment: "Truly a one-of-a-kind and amazing person 🌟" },
 ];
