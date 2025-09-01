@@ -112,12 +112,6 @@ export default function Landing({ onEnter }) {
       <Floating style={{ bottom: 100, right: 40 }} variants={floatVariants} animate="animate">
         <PartyPopper size={48} />
       </Floating>
-      <Floating style={{ top: 150, left: 50 }} variants={floatVariants} animate="animate">
-        <Star size={36} />
-      </Floating>
-      <Floating style={{ bottom: 50, right: 70 }} variants={floatVariants} animate="animate">
-        <Sparkles size={32} />
-      </Floating>
 
       <Title
         initial={{ scale: 0.9, opacity: 0 }}
