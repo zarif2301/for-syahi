@@ -5,14 +5,18 @@ import { Camera, Star, Gift } from "lucide-react";
 import { photos } from "../utils/photos";
 import ImageModal from "./ImageModal";
 
+
 const Section = styled.section`
   padding: 60px 20px; max-width: 1200px; margin: 0 auto;
 `;
 
 const Heading = styled.h2`
-  text-align: center; font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 24px;
+  text-align: center; 
+  font-size: clamp(1.6rem, 4vw, 2.4rem); 
+  margin: 0 0 24px;
   display: inline-flex; gap: 10px; align-items: center; justify-content: center;
-  width: 100%; color: var(--purple);
+  width: 100%; 
+  color: #1a237e; /* deep blue */
 `;
 
 const Grid = styled.div`

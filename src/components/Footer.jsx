@@ -9,7 +9,8 @@ const Bar = styled.footer`
 export default function Footer() {
   return (
     <Bar>
-      Made with <Heart size={16}/> and <Star size={16}/> — celebrating you <PartyPopper size={16}/> 
+      Made with <Heart size={16}/> by ur one and only <Star size={16}/>
     </Bar>
   );
 }
+

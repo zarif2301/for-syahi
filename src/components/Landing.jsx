@@ -2,6 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { GraduationCap, Heart, PartyPopper, Sparkles, Star, Crown } from "lucide-react";
+import confetti from "canvas-confetti";
 
 const float = keyframes`
   0%,100% { transform: translateY(0); }
@@ -18,7 +19,7 @@ const Wrap = styled(motion.div)`
   position: relative;
   overflow: hidden;
   padding: 32px;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(135deg, #a8dadc, #457b9d);
 `;
 
 const BGOrb = styled.div`
@@ -26,24 +27,23 @@ const BGOrb = styled.div`
   width: 50vmax;
   height: 50vmax;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,110,199,.35), transparent 60%),
-              radial-gradient(circle at 70% 70%, rgba(124,58,237,.35), transparent 60%);
-  filter: blur(30px);
-  pointer-events: none; /* 🔑 This allows clicks to pass through */
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 60%),
+              radial-gradient(circle at 70% 70%, rgba(255,255,255,.25), transparent 60%);
+  filter: blur(40px);
+  pointer-events: none;
 `;
 
 const Floating = styled(motion.div)`
   position: absolute;
   opacity: 0.25;
-  pointer-events: none; /* 🔑 Important for clickable button underneath */
+  pointer-events: none;
 `;
-
 
 const Title = styled(motion.h1)`
   font-size: clamp(2.2rem, 6vw, 4rem);
   margin-bottom: 16px;
   line-height: 1.1;
-  background: linear-gradient(90deg, #ff6ec4, #7c3aed);
+  background: linear-gradient(90deg, #74c0fc, #1d4ed8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
@@ -52,10 +52,11 @@ const Subtitle = styled(motion.p)`
   margin-bottom: 28px;
   font-size: clamp(1rem, 2.6vw, 1.2rem);
   opacity: 0.9;
+  color: white;
 `;
 
 const EnterBtn = styled.button`
-  z-index: 10; /* 🔑 Ensure it’s above floating elements */
+  z-index: 10;
   border: 0;
   cursor: pointer;
   padding: 16px 28px;
@@ -63,7 +64,7 @@ const EnterBtn = styled.button`
   font-weight: 700;
   font-size: 1.05rem;
   color: white;
-  background: linear-gradient(90deg, #ff6ec4, #7c3aed);
+  background: linear-gradient(90deg, #74c0fc, #1d4ed8);
   display: inline-flex;
   gap: 10px;
   align-items: center;
@@ -75,10 +76,19 @@ const EnterBtn = styled.button`
   }
 `;
 
-
 export default function Landing({ onEnter }) {
   const floatVariants = {
     animate: { y: [0, -12, 0], transition: { repeat: Infinity, duration: 4 } }
+  };
+
+  const handleEnter = () => {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ["#1d4ed8", "#74c0fc", "#90e0ef"]
+    });
+    onEnter();
   };
 
   return (
@@ -102,6 +112,12 @@ export default function Landing({ onEnter }) {
       <Floating style={{ bottom: 100, right: 40 }} variants={floatVariants} animate="animate">
         <PartyPopper size={48} />
       </Floating>
+      <Floating style={{ top: 150, left: 50 }} variants={floatVariants} animate="animate">
+        <Star size={36} />
+      </Floating>
+      <Floating style={{ bottom: 50, right: 70 }} variants={floatVariants} animate="animate">
+        <Sparkles size={32} />
+      </Floating>
 
       <Title
         initial={{ scale: 0.9, opacity: 0 }}
@@ -119,7 +135,7 @@ export default function Landing({ onEnter }) {
         You did it. I’m so proud of you. Let’s walk down our memory lane ✨
       </Subtitle>
 
-      <EnterBtn onClick={onEnter}>
+      <EnterBtn onClick={handleEnter}>
         <GraduationCap /> Enter <Heart />
       </EnterBtn>
     </Wrap>
