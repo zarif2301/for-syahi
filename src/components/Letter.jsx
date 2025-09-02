@@ -50,12 +50,10 @@ export default function Letter() {
 
         <Header><Sparkles /> To Syahi <Sparkles /></Header>
         <Body>
-          Congratulations on graduating my loooove💙. I am soooo proud of you 
-          for everything you’ve accomplished.💖 This graduation is just the beginning 
-          of all the incredible things I know you’ll achieve. You’ve worked so hard, 
-          and I admire your strength, determination, and passion. I can’t wait to see 
-          where life takes you next, and I’ll always be here cheering for you. 
-          Congratulations, my love — you deserve the world and more! ✨
+          Congratulations on graduating my loooove💙. I am so proud of you 
+          for everything you’ve accomplished💖. This is a massive achievement for us and
+          I can’t wait to see what the future holds for you. I know you will do great things.
+           I’ll always be here cheering for you at the side. Congratulations again bebe, my love — you deserve the world and more!!!! ✨
         </Body>
 
         <FooterLine>
